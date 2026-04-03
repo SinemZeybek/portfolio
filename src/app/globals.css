@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-background: #fafafa;
+  --color-foreground: #1a1a1a;
+  --color-muted: #666666;
+  --color-subtle: #888888;
+  --color-border: #e5e5e5;
+  --color-surface: #f3f3f3;
+  --color-card: #ffffff;
+  --color-accent: #0c1a2e;
+  --color-accent-light: #1e3a5f;
+  --color-accent-subtle: #dbeafe;
+  --color-accent-muted: #1e3a5f;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease forwards;
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #1e3a5f 100%);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #0f2847 0%, #1e3a5f 100%);
+  box-shadow: 0 4px 24px rgba(15, 40, 71, 0.35);
+}
+
+/* Card glow on hover */
+.card-glow {
+  transition: all 0.3s ease;
+}
+.card-glow:hover {
+  border-color: rgba(30, 58, 95, 0.4);
+  box-shadow: 0 8px 30px rgba(12, 26, 46, 0.1), 0 0 0 1px rgba(30, 58, 95, 0.1);
+}
+
+/* Hero gradient blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.blob-1 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.2) 0%, rgba(15, 40, 71, 0.1) 40%, transparent 70%);
+  top: -15%;
+  right: -10%;
+  animation: blob-drift-1 20s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(15, 40, 71, 0.06) 40%, transparent 70%);
+  bottom: 0%;
+  left: -12%;
+  animation: blob-drift-2 25s ease-in-out infinite;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.08) 0%, rgba(203, 213, 225, 0.03) 40%, transparent 70%);
+  top: 30%;
+  right: 20%;
+  animation: blob-drift-3 18s ease-in-out infinite;
+}
+
+/* Metallic shimmer line */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(-45deg); }
+  100% { transform: translateX(200%) rotate(-45deg); }
+}
+
+.hero-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(148, 163, 184, 0.03) 45%,
+    rgba(203, 213, 225, 0.06) 50%,
+    rgba(148, 163, 184, 0.03) 55%,
+    transparent 100%
+  );
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+/* Subtle grid overlay for depth */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%);
+}
+
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-40px, 30px) scale(1.05); }
+  50% { transform: translate(-20px, -20px) scale(0.95); }
+  75% { transform: translate(30px, 15px) scale(1.02); }
+}
+
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -25px) scale(1.04); }
+  50% { transform: translate(50px, 20px) scale(0.96); }
+  75% { transform: translate(-20px, 35px) scale(1.03); }
+}
+
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-35px, -20px) scale(1.06); }
+  66% { transform: translate(25px, 30px) scale(0.94); }
+}
+
+/* Section accent bar */
+.section-accent::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #0f2847, #1e3a5f);
+  border-radius: 2px;
+  margin-top: 12px;
+}
