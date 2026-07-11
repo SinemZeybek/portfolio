@@ -11,15 +11,15 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "HTML / CSS", "SQL"],
+    items: ["TypeScript", "JavaScript", "Python", "Dart", "PHP", "HTML / CSS", "SQL"],
   },
   {
-    title: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS"],
+    title: "Frontend & Mobile",
+    items: ["React", "Next.js", "Tailwind CSS", "Flutter"],
   },
   {
     title: "Backend & Databases",
-    items: ["Node.js", "REST APIs", "PostgreSQL", "MySQL", "Redis", "Prisma", "BullMQ"],
+    items: ["Node.js", "REST APIs", "PostgreSQL", "MySQL", "Redis", "Prisma", "BullMQ", "Supabase", "Laravel"],
   },
   {
     title: "Tools & Technologies",
