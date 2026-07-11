@@ -58,8 +58,35 @@ export const projects: Project[] = [
     live: "https://thinknpost.vercel.app",
   },
   {
-    slug: "support-desk",
+    slug: "makubook",
     number: "02",
+    name: "Makubook",
+    tagline: "International Recipe Exchange for Finland",
+    description:
+      "A bilingual (Finnish/English) web app where immigrants and expats share recipes from their home countries with Finns — filling a gap no existing Finnish recipe platform covers.",
+    role: "Solo Developer",
+    details: [
+      "Designed and built the full-stack app with Next.js and Supabase (PostgreSQL + Auth + Storage), with Row-Level Security enforced on all tables so users can only edit or delete their own content.",
+      "Implemented email/password authentication via @supabase/ssr, with user profiles that include display name, birthday, and an optional avatar stored in Supabase Storage.",
+      "Built a recipe creation flow where users submit structured ingredients, numbered step-by-step instructions, optional tips, and a required photo — with country of origin and meal type tags for discoverability.",
+      "Developed search and filter on the homepage by recipe title, country, meal type, and language — all via URL query params so results are shareable and linkable.",
+      "Added comments and 1–5 star ratings gated to logged-in users, enforced both in the UI and at the database RLS level, displayed with commenter name and avatar.",
+      "Built recipe edit and delete flows so owners can manage their own content, with delete deliberately placed one step deeper than the detail page to prevent accidental loss.",
+      "Chose Stockholm as the Supabase region for GDPR compliance given the Finnish user base.",
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "i18n (Finnish/English)",
+    ],
+    screenshots: [],
+  },
+  {
+    slug: "support-desk",
+    number: "03",
     name: "Support Desk",
     tagline: "AI-Powered Ticket System",
     description:
@@ -85,8 +112,49 @@ export const projects: Project[] = [
     github: "https://github.com/SinemZeybek/AI-Powered-Ticket-System",
   },
   {
+    slug: "zeybek-hukuk",
+    number: "04",
+    name: "Zeybek Hukuk Bürosu",
+    tagline: "Law Firm Website — Live Client Project",
+    description:
+      "A production website for a real law firm in İzmit, Turkey — built and delivered for a client and live at zeybekhukuk.com.",
+    role: "Freelance Developer",
+    details: [
+      "Designed and built the full site for Zeybek Hukuk Bürosu, a law firm with 47 years of history and 8+ practice areas including commercial, criminal, family, and medical law.",
+      "Used Statamic (a Laravel-based flat-file CMS) so the client can manage content — articles, team profiles, and practice areas — without touching code.",
+      "Built a custom Tailwind CSS design that communicates trust and professionalism, with Turkish-language content throughout.",
+      "Handled the full delivery pipeline: local development with Laravel Vite, production deployment, and domain configuration at zeybekhukuk.com.",
+    ],
+    tech: ["Laravel", "Statamic CMS", "PHP", "Tailwind CSS", "Vite"],
+    screenshots: [],
+    live: "https://zeybekhukuk.com",
+  },
+  {
+    slug: "whimble",
+    number: "05",
+    name: "Whimble",
+    tagline: "Cozy Self-Care Journal & Virtual Pet",
+    description:
+      "A mobile app where users care for a fantasy pet by logging daily self-care habits — water, sleep, mood, skincare, exercise, and meals.",
+    role: "Solo Developer",
+    details: [
+      "Designed and built a full Flutter app targeting Android and iOS, with a cozy pastel aesthetic using the Quicksand typeface and custom illustrated pet characters.",
+      "Created three original fantasy pets — Mossling (plant spirit), Lumifox (light fox), and Cloudpuff (cloud creature) — each with four evolution stages unlocked at 3, 7, and 30-day streaks.",
+      "Implemented customisable self-care logging categories (water, sleep, mood, skincare, exercise, meals) with a color-coded monthly calendar view for habit tracking at a glance.",
+      "Used Provider for state management and Hive for local persistence, keeping the app fully offline with no backend dependency.",
+      "Designed the emotional tone deliberately gently — the pet gets sleepy rather than distressed when days are missed, reducing guilt and encouraging re-engagement.",
+    ],
+    tech: ["Flutter", "Dart", "Provider", "Hive"],
+    screenshots: [
+      { src: "/screenshots/00b_pet_selection.png", caption: "Choose Your Companion — pick from Mossling, Lumifox, or Cloudpuff, each with their own personality" },
+      { src: "/screenshots/01_home.png", caption: "Home screen — your pet's current mood, happiness bar, and today's progress at a glance" },
+      { src: "/screenshots/02_log.png", caption: "Daily self-care log — track water, sleep, mood, skincare, exercise, and meals, with a mood check-in" },
+      { src: "/screenshots/04_calendar.png", caption: "Self-Care Calendar — color-coded monthly view showing your habit consistency over time" },
+    ],
+  },
+  {
     slug: "python-internship",
-    number: "03",
+    number: "06",
     name: "Python Internship Projects",
     tagline: "Backend Development at Virasoft",
     description:

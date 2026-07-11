@@ -29,7 +29,7 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-slate-400 via-slate-300 to-slate-500 bg-clip-text text-transparent">Peltokangas</span>
           </h1>
           <h2 className="text-2xl font-medium text-slate-300 mb-6 animate-fade-in-up animation-delay-200">
-            Software Engineer &middot; Berlin / Jyväskylä
+            Software Engineer &middot; Tampere, Finland
           </h2>
           <p className="text-lg text-slate-300/80 leading-relaxed mb-9 max-w-lg animate-fade-in-up animation-delay-300">
             Software Engineering graduate with hands-on experience building

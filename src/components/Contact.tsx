@@ -47,7 +47,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold tracking-tight mb-6 section-accent">Get in Touch</h2>
           <p className="text-muted text-lg leading-relaxed mb-8">
             I&apos;m actively looking for software engineering opportunities in
-            Jyväskylä and beyond in Finland. Whether you have a role in mind
+            Tampere and beyond in Finland. Whether you have a role in mind
             or just want to have a chat, my inbox is always open.
           </p>
           <div className="flex items-center gap-4 flex-wrap">
