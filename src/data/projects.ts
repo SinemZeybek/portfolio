@@ -1,6 +1,7 @@
 export interface Screenshot {
   src: string | string[];
   caption: string;
+  mobile?: boolean;
 }
 
 export interface Project {
@@ -146,10 +147,10 @@ export const projects: Project[] = [
     ],
     tech: ["Flutter", "Dart", "Provider", "Hive"],
     screenshots: [
-      { src: "/screenshots/00b_pet_selection.png", caption: "Choose Your Companion — pick from Mossling, Lumifox, or Cloudpuff, each with their own personality" },
-      { src: "/screenshots/01_home.png", caption: "Home screen — your pet's current mood, happiness bar, and today's progress at a glance" },
-      { src: "/screenshots/02_log.png", caption: "Daily self-care log — track water, sleep, mood, skincare, exercise, and meals, with a mood check-in" },
-      { src: "/screenshots/04_calendar.png", caption: "Self-Care Calendar — color-coded monthly view showing your habit consistency over time" },
+      { src: "/screenshots/00b_pet_selection.png", caption: "Choose Your Companion — pick from Mossling, Lumifox, or Cloudpuff, each with their own personality", mobile: true },
+      { src: "/screenshots/01_home.png", caption: "Home screen — your pet's current mood, happiness bar, and today's progress at a glance", mobile: true },
+      { src: "/screenshots/02_log.png", caption: "Daily self-care log — track water, sleep, mood, skincare, exercise, and meals, with a mood check-in", mobile: true },
+      { src: "/screenshots/04_calendar.png", caption: "Self-Care Calendar — color-coded monthly view showing your habit consistency over time", mobile: true },
     ],
   },
   {

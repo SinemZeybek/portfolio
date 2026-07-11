@@ -119,45 +119,72 @@ export default async function ProjectPage({
         )}
 
         {/* Screenshots */}
-        {project.screenshots.length > 0 && (
-          <div className="mb-16 flex flex-col gap-10">
-            {project.screenshots.map((screenshot, i) => (
-              <figure key={i}>
-                {Array.isArray(screenshot.src) ? (
-                  <div className="mx-auto max-w-5xl rounded-xl border border-border overflow-hidden shadow-sm">
-                    {screenshot.src.map((src, j) => (
-                      <div key={j}>
-                        {j > 0 && <div className="border-t border-border" />}
+        {project.screenshots.length > 0 && (() => {
+          const mobileShots = project.screenshots.filter(s => s.mobile);
+          const desktopShots = project.screenshots.filter(s => !s.mobile);
+          return (
+            <div className="mb-16 flex flex-col gap-10">
+              {/* Mobile screenshots: 2-up grid */}
+              {mobileShots.length > 0 && (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {mobileShots.map((screenshot, i) => (
+                    <figure key={i} className="flex flex-col">
+                      <div className="rounded-2xl border border-border overflow-hidden shadow-sm">
                         <Image
-                          src={src}
-                          alt={`${screenshot.caption} (${j + 1})`}
-                          width={900}
+                          src={screenshot.src as string}
+                          alt={screenshot.caption}
+                          width={320}
                           height={0}
                           className="w-full h-auto block"
-                          sizes="(max-width: 896px) 100vw, 896px"
+                          sizes="(max-width: 640px) 50vw, 25vw"
                         />
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="mx-auto max-w-5xl rounded-xl border border-border overflow-hidden shadow-sm">
-                    <Image
-                      src={screenshot.src}
-                      alt={screenshot.caption}
-                      width={900}
-                      height={0}
-                      className="w-full h-auto block"
-                      sizes="(max-width: 896px) 100vw, 896px"
-                    />
-                  </div>
-                )}
-                <figcaption className="mt-3 text-sm text-muted text-center">
-                  {screenshot.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
+                      <figcaption className="mt-2 text-xs text-muted text-center leading-snug">
+                        {screenshot.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
+              {/* Desktop/web screenshots: full width */}
+              {desktopShots.map((screenshot, i) => (
+                <figure key={i}>
+                  {Array.isArray(screenshot.src) ? (
+                    <div className="mx-auto max-w-5xl rounded-xl border border-border overflow-hidden shadow-sm">
+                      {screenshot.src.map((src, j) => (
+                        <div key={j}>
+                          {j > 0 && <div className="border-t border-border" />}
+                          <Image
+                            src={src}
+                            alt={`${screenshot.caption} (${j + 1})`}
+                            width={900}
+                            height={0}
+                            className="w-full h-auto block"
+                            sizes="(max-width: 896px) 100vw, 896px"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="mx-auto max-w-5xl rounded-xl border border-border overflow-hidden shadow-sm">
+                      <Image
+                        src={screenshot.src}
+                        alt={screenshot.caption}
+                        width={900}
+                        height={0}
+                        className="w-full h-auto block"
+                        sizes="(max-width: 896px) 100vw, 896px"
+                      />
+                    </div>
+                  )}
+                  <figcaption className="mt-3 text-sm text-muted text-center">
+                    {screenshot.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Nav to other projects */}
         <div className="mt-20 pt-10 border-t border-border">
