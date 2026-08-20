@@ -96,10 +96,15 @@ export const projects: Project[] = [
       "Resend",
       "Vercel",
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/screenshots/makubook1.png", caption: "Homepage — hero banner, filterable search, and the recipe grid" },
+      { src: "/screenshots/makubook2.png", caption: "Recipe detail page — structured ingredients, steps, and tips" },
+      { src: "/screenshots/makubook3.jpeg", caption: "Mobile homepage — the redesigned bottom navigation bar" },
+    ],
     github: "https://github.com/SinemZeybek/makubook",
     live: "https://makubook.com",
     liveLabel: "Visit Site",
+    cardImage: "/screenshots/makubook1.png",
   },
   {
     slug: "support-desk",
