@@ -76,7 +76,7 @@ export default async function ProjectPage({
               rel="noopener noreferrer"
               className="inline-block px-6 py-2.5 border border-border rounded-lg font-medium text-sm hover:border-[#1e3a5f] hover:text-[#1e3a5f] transition-colors"
             >
-              Live Demo
+              {project.liveLabel ?? "Live Demo"}
             </a>
           )}
         </div>

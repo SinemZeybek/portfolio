@@ -85,7 +85,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               rel="noopener noreferrer"
               className="text-sm font-medium text-muted hover:text-foreground transition-colors"
             >
-              Live Demo &rarr;
+              {project.liveLabel ?? "Live Demo"} &rarr;
             </a>
           )}
         </div>

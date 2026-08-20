@@ -16,6 +16,8 @@ export interface Project {
   screenshots: Screenshot[];
   github?: string;
   live?: string;
+  /** Overrides the default "Live Demo" button label, e.g. "Visit Site" for a real production product. */
+  liveLabel?: string;
 }
 
 export const projects: Project[] = [
@@ -94,6 +96,7 @@ export const projects: Project[] = [
     screenshots: [],
     github: "https://github.com/SinemZeybek/makubook",
     live: "https://makubook.com",
+    liveLabel: "Visit Site",
   },
   {
     slug: "support-desk",
