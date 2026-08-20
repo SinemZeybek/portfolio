@@ -25,22 +25,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      {/* Colorful header: project screenshot (if available) tinted with the accent gradient, or the gradient alone */}
-      <div className="relative h-36 overflow-hidden">
-        {project.cardImage && (
+      {/* Header: project screenshot shown clean (no color wash), or the accent gradient alone as a fallback */}
+      <div className="relative h-52 overflow-hidden">
+        {project.cardImage ? (
           <div
             className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105"
             style={{ backgroundImage: `url(${project.cardImage})` }}
           />
+        ) : (
+          <div className={`absolute inset-0 bg-gradient-to-br ${accent}`} />
         )}
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${accent} ${
-            project.cardImage ? "opacity-70" : "opacity-100"
-          }`}
-        />
-        <span className="absolute bottom-2 right-4 text-6xl font-bold text-white/20 leading-none select-none">
+          className={`absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br ${accent} text-sm font-bold text-white shadow-md`}
+        >
           {project.number}
-        </span>
+        </div>
       </div>
 
       <div className="p-8 relative">
