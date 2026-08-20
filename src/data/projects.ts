@@ -61,7 +61,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/SinemZeybek/micro-saas-thinknpost",
     live: "https://thinknpost.vercel.app",
-    cardImage: "/screenshots/thinknpost-1.png",
+    cardImage: "/screenshots/card_thinknpost.png",
   },
   {
     slug: "makubook",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     github: "https://github.com/SinemZeybek/makubook",
     live: "https://makubook.com",
     liveLabel: "Visit Site",
-    cardImage: "/screenshots/makubook1.png",
+    cardImage: "/screenshots/card_makubook.png",
   },
   {
     slug: "support-desk",
@@ -150,6 +150,7 @@ export const projects: Project[] = [
     tech: ["Laravel", "Statamic CMS", "PHP", "Tailwind CSS", "Vite"],
     screenshots: [],
     live: "https://zeybekhukuk.com",
+    cardImage: "/screenshots/card_zeybekhukuk.png",
   },
   {
     slug: "whimble",
@@ -173,7 +174,7 @@ export const projects: Project[] = [
       { src: "/screenshots/02_log.png", caption: "Daily self-care log — track water, sleep, mood, skincare, exercise, and meals, with a mood check-in", mobile: true },
       { src: "/screenshots/04_calendar.png", caption: "Self-Care Calendar — color-coded monthly view showing your habit consistency over time", mobile: true },
     ],
-    cardImage: "/screenshots/01_home.png",
+    cardImage: "/screenshots/card_whimble.png",
   },
   {
     slug: "python-internship",
@@ -190,6 +191,7 @@ export const projects: Project[] = [
     tech: ["Python"],
     screenshots: [],
     github: "https://github.com/SinemZeybek/python-internship-projects",
+    cardImage: "/screenshots/card_python.jpg",
   },
 ];
 
