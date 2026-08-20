@@ -25,18 +25,25 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      {/* Gradient top bar */}
-      <div className={`h-1 bg-gradient-to-r ${accent}`} />
-
-      {/* Hover gradient overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${accent} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-300`} />
-
-      <div className="p-8 relative">
-        {/* Large faded number */}
-        <span className="absolute top-6 right-8 text-6xl font-bold text-foreground/[0.03] leading-none select-none">
+      {/* Colorful header: project screenshot (if available) tinted with the accent gradient, or the gradient alone */}
+      <div className="relative h-36 overflow-hidden">
+        {project.cardImage && (
+          <div
+            className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105"
+            style={{ backgroundImage: `url(${project.cardImage})` }}
+          />
+        )}
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${accent} ${
+            project.cardImage ? "opacity-70" : "opacity-100"
+          }`}
+        />
+        <span className="absolute bottom-2 right-4 text-6xl font-bold text-white/20 leading-none select-none">
           {project.number}
         </span>
+      </div>
 
+      <div className="p-8 relative">
         <div className="flex items-center gap-3 mb-4">
           <span className={`text-xs font-semibold bg-gradient-to-r ${accent} bg-clip-text text-transparent`}>
             {project.number}

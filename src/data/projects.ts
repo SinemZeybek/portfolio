@@ -18,6 +18,8 @@ export interface Project {
   live?: string;
   /** Overrides the default "Live Demo" button label, e.g. "Visit Site" for a real production product. */
   liveLabel?: string;
+  /** Background image shown in the project card's header on the homepage grid. */
+  cardImage?: string;
 }
 
 export const projects: Project[] = [
@@ -59,6 +61,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/SinemZeybek/micro-saas-thinknpost",
     live: "https://thinknpost.vercel.app",
+    cardImage: "/screenshots/thinknpost-1.png",
   },
   {
     slug: "makubook",
@@ -165,6 +168,7 @@ export const projects: Project[] = [
       { src: "/screenshots/02_log.png", caption: "Daily self-care log — track water, sleep, mood, skincare, exercise, and meals, with a mood check-in", mobile: true },
       { src: "/screenshots/04_calendar.png", caption: "Self-Care Calendar — color-coded monthly view showing your habit consistency over time", mobile: true },
     ],
+    cardImage: "/screenshots/01_home.png",
   },
   {
     slug: "python-internship",
