@@ -140,6 +140,7 @@ export const projects: Project[] = [
       { src: "/screenshots/AI-assistant1.png", caption: "Admin Support Inbox — escalated questions land here for a human to review and resolve" },
     ],
     github: "https://github.com/SinemZeybek/AI-Support-System",
+    cardImage: "/screenshots/AI-assistant.png",
   },
   {
     slug: "zeybek-hukuk",
