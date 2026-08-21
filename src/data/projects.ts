@@ -139,7 +139,7 @@ export const projects: Project[] = [
       { src: "/screenshots/AI-assistant.png", caption: "The AI agent answering from its knowledge base, then escalating a question it can't confidently handle" },
       { src: "/screenshots/AI-assistant1.png", caption: "Admin Support Inbox — escalated questions land here for a human to review and resolve" },
     ],
-    github: "https://github.com/SinemZeybek/AI-Powered-Ticket-System",
+    github: "https://github.com/SinemZeybek/AI-Support-System",
   },
   {
     slug: "zeybek-hukuk",
