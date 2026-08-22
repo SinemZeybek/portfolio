@@ -158,7 +158,7 @@ export const projects: Project[] = [
     ],
     tech: ["Laravel", "Statamic CMS", "PHP", "Tailwind CSS", "Vite"],
     screenshots: [
-      { src: "/screenshots/zeybekhukuk.png", caption: "Homepage — hero section with the firm's tagline and years of experience" },
+      { src: "/screenshots/zeybekhukuk.png", caption: "Homepage — hero section with the firm's tagline and years of experience, plus a live chat widget for visitor inquiries" },
       { src: "/screenshots/zeybekhukuk3.png", caption: "Our Team — firm history, stats, and corporate approach" },
       { src: "/screenshots/zeybekhukuk2.png", caption: "Contact page — contact form, map location, and working hours" },
     ],
