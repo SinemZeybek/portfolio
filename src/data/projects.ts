@@ -157,7 +157,11 @@ export const projects: Project[] = [
       "Handled the full delivery pipeline: local development with Laravel Vite, production deployment, and domain configuration at zeybekhukuk.com.",
     ],
     tech: ["Laravel", "Statamic CMS", "PHP", "Tailwind CSS", "Vite"],
-    screenshots: [],
+    screenshots: [
+      { src: "/screenshots/zeybekhukuk.png", caption: "Homepage — hero section with the firm's tagline and years of experience" },
+      { src: "/screenshots/zeybekhukuk3.png", caption: "Our Team — firm history, stats, and corporate approach" },
+      { src: "/screenshots/zeybekhukuk2.png", caption: "Contact page — contact form, map location, and working hours" },
+    ],
     live: "https://zeybekhukuk.com",
     cardImage: "/screenshots/card_zeybekhukuk.png",
   },
