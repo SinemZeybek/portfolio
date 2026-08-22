@@ -145,7 +145,7 @@ export const projects: Project[] = [
   {
     slug: "zeybek-hukuk",
     number: "04",
-    name: "Zeybek Hukuk Bürosu",
+    name: "Zeybek Law Firm",
     tagline: "Law Firm Website — Live Client Project",
     description:
       "A production website for a real law firm in İzmit, Turkey — built and delivered for a client and live at zeybekhukuk.com.",
